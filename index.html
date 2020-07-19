@@ -155,7 +155,11 @@ Error message and password prompt
 
 <li>$:/config/Manager/Tag</li>
 
+<li>$:/config/NewJournal/Fields</li>
+
 <li>$:/config/NewJournal/Tags</li>
+
+<li>$:/config/NewJournal/Text</li>
 
 <li>$:/config/NewTiddler/Tags</li>
 
@@ -167,7 +171,13 @@ Error message and password prompt
 
 <li>$:/config/RelinkOnRename</li>
 
+<li>$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/new-journal-here</li>
+
+<li>$:/config/ViewToolbarButtons/Visibility/$:/plugins/.dtn/new-from-skeleton/button</li>
+
 <li>$:/core</li>
+
+<li>$:/core/ui/Buttons/new-tiddler</li>
 
 <li>$:/DefaultTiddlers</li>
 
@@ -189,7 +199,13 @@ Error message and password prompt
 
 <li>$:/Import</li>
 
+<li>$:/Import!!popup-Untitled</li>
+
 <li>$:/isEncrypted</li>
+
+<li>$:/plugins/.dtn/new-from-skeleton</li>
+
+<li>$:/plugins/.dtn/new-from-skeleton/button</li>
 
 <li>$:/SiteSubtitle</li>
 
@@ -197,9 +213,13 @@ Error message and password prompt
 
 <li>$:/state/image-picker/system-1650702437</li>
 
+<li>$:/state/plugin-info-1617027998-$:/plugins/.dtn/new-from-skeleton---1754274699</li>
+
 <li>$:/state/showeditpreview</li>
 
 <li>$:/state/sidebar</li>
+
+<li>$:/state/tab--1498284803</li>
 
 <li>$:/state/tab--2112689675</li>
 
@@ -275,6 +295,10 @@ Error message and password prompt
 
 <li>$:/StoryList</li>
 
+<li>$:/tags/ViewToolbar</li>
+
+<li>$:/temp/advancedsearch</li>
+
 <li>$:/temp/info-plugin</li>
 
 <li>$:/temp/NewTagName</li>
@@ -299,7 +323,11 @@ Error message and password prompt
 
 <li>Cities</li>
 
+<li>Creation Menu</li>
+
 <li>D_Nation</li>
+
+<li>Draft of '$:/plugins/.dtn/new-from-skeleton/button'</li>
 
 <li>Dwarvin Capital</li>
 
@@ -325,6 +353,8 @@ Error message and password prompt
 
 <li>TableOfContents</li>
 
+<li>Temp_Character</li>
+
 <li>Terria</li>
 
 <li>The Ambassador’s Lodge</li>
@@ -336,6 +366,8 @@ Error message and password prompt
 <li>Tipper's Gang</li>
 
 <li>Tulc'ron's Final Word</li>
+
+<li>Untitled</li>
 
 <li>Yu'ra Luft</li>
 
@@ -383,7 +415,13 @@ Error message and password prompt
 <div created="20200613234824349" modified="20200613234931056" title="$:/config/Manager/Tag">
 <pre>Journal</pre>
 </div>
-<div created="20200719004908499" modified="20200719004908499" tags="Journal" title="$:/config/NewJournal/Tags">
+<div created="20200719221509498" modified="20200719221535293" species="" tags="" title="$:/config/NewJournal/Fields">
+<pre></pre>
+</div>
+<div created="20200719004908499" modified="20200719222351438" tags="Journal" title="$:/config/NewJournal/Tags">
+<pre></pre>
+</div>
+<div created="20200719221213548" modified="20200719221213548" title="$:/config/NewJournal/Text">
 <pre></pre>
 </div>
 <div modified="20200613215408454" title="$:/config/NewTiddler/Tags">
@@ -400,6 +438,12 @@ Error message and password prompt
 </div>
 <div created="20200613230927017" modified="20200613230927017" title="$:/config/RelinkOnRename">
 <pre>yes</pre>
+</div>
+<div created="20200719221239362" modified="20200719221252056" title="$:/config/ViewToolbarButtons/Visibility/$:/core/ui/Buttons/new-journal-here">
+<pre>hide</pre>
+</div>
+<div bag="default" created="20190114114005453" modified="20200719220502237" revision="0" tags="" title="$:/config/ViewToolbarButtons/Visibility/$:/plugins/.dtn/new-from-skeleton/button" type="text/vnd.tiddlywiki">
+<pre>hide</pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="" description="TiddlyWiki5 core" list="readme" name="Core" plugin-priority="0" plugin-type="plugin" title="$:/core" type="application/json" version="5.1.22">
 <pre>{
@@ -9774,6 +9818,18 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div caption="{{$:/core/images/new-button}} {{$:/language/Buttons/NewTiddler/Caption}}" created="20200719224247833" description="{{$:/language/Buttons/NewTiddler/Hint}}" modified="20200719224247833" tags="$:/tags/PageControls" title="$:/core/ui/Buttons/new-tiddler">
+<pre>\whitespace trim
+&lt;$button actions={{$:/core/ui/Actions/new-tiddler}} tooltip={{$:/language/Buttons/NewTiddler/Hint}} aria-label={{$:/language/Buttons/NewTiddler/Caption}} class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
+&lt;$list filter=&quot;[&lt;tv-config-toolbar-icons&gt;match[yes]]&quot;&gt;
+{{$:/core/images/new-button}}
+&lt;/$list&gt;
+&lt;$list filter=&quot;[&lt;tv-config-toolbar-text&gt;match[yes]]&quot;&gt;
+&lt;span class=&quot;tc-btn-text&quot;&gt;&lt;$text text={{$:/language/Buttons/NewTiddler/Caption}}/&gt;&lt;/span&gt;
+&lt;/$list&gt;
+&lt;/$button&gt;
+</pre>
+</div>
 <div created="20200613214823857" modified="20200613215223743" title="$:/DefaultTiddlers">
 <pre>[[Table of Contents]]
 </pre>
@@ -9805,10 +9861,140 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>The following tiddlers were imported:
 
-# [[Screen Shot 2020-06-14 at 17.45.43.png]]</pre>
+# [[$:/plugins/.dtn/new-from-skeleton]]</pre>
+</div>
+<div created="20200719220142842" modified="20200719220142842" title="$:/Import!!popup-Untitled">
+<pre>yes</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
+</div>
+<div author="David Nebauer" core-version="&gt;=5.1.18" created="20190503182400901" description="New tiddlers from a skeleton" list="readme credits license" modified="20190503182400901" plugin-type="plugin" title="$:/plugins/.dtn/new-from-skeleton" type="application/json" version="0.0.1">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/config/plugins/.dtn/new-from-skeleton/skeleton&quot;: {
+            &quot;text&quot;: &quot;&quot;,
+            &quot;bag&quot;: &quot;default&quot;,
+            &quot;revision&quot;: &quot;0&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;title&quot;: &quot;$:/config/plugins/.dtn/new-from-skeleton/skeleton&quot;,
+            &quot;tags&quot;: &quot;Computing Software&quot;,
+            &quot;modified&quot;: &quot;20190501130834428&quot;,
+            &quot;created&quot;: &quot;20190118104453815&quot;
+        },
+        &quot;$:/config/ViewToolbarButtons/Visibility/$:/plugins/.dtn/new-from-skeleton/button&quot;: {
+            &quot;text&quot;: &quot;show&quot;,
+            &quot;bag&quot;: &quot;default&quot;,
+            &quot;revision&quot;: &quot;0&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;title&quot;: &quot;$:/config/ViewToolbarButtons/Visibility/$:/plugins/.dtn/new-from-skeleton/button&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20190503174239408&quot;,
+            &quot;created&quot;: &quot;20190114114005453&quot;
+        },
+        &quot;$:/plugins/.dtn/new-from-skeleton/button&quot;: {
+            &quot;text&quot;: &quot;\\whitespace trim\n\\define newTiddlerButton()\n  &lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt;\n           tooltip={{$:/plugins/.dtn/new-from-skeleton/button/hint}} &gt;\n\n    &lt;!-- Create new tiddler from tiddler titled \&quot;$param\&quot; --&gt;\n\n    &lt;$action-sendmessage $message=\&quot;tm-new-tiddler\&quot;\n                         $param=\&quot;$:/config/plugins/.dtn/new-from-skeleton/skeleton\&quot;\n                         title=\&quot;New Tiddler\&quot; /&gt;\n\n    &lt;!-- Add as toolbar button --&gt;\n\n    &lt;$list filter=\&quot;[&lt;tv-config-toolbar-icons&gt;prefix[yes]]\&quot;&gt;\n      {{$:/plugins/.dtn/new-from-skeleton/button/image}}\n    &lt;/$list&gt;\n\n    &lt;$list filter=\&quot;[&lt;tv-config-toolbar-text&gt;prefix[yes]]\&quot;&gt;\n      &lt;span class=\&quot;tc-btn-text\&quot;&gt;\n        &lt;$text text={{$:/plugins/.dtn/new-from-skeleton/button/caption}}/&gt;\n      &lt;/span&gt;\n    &lt;/$list&gt;\n\n  &lt;/$button&gt;\n\\end\n\n&lt;&lt;newTiddlerButton&gt;&gt;&quot;,
+            &quot;bag&quot;: &quot;default&quot;,
+            &quot;revision&quot;: &quot;0&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;title&quot;: &quot;$:/plugins/.dtn/new-from-skeleton/button&quot;,
+            &quot;tags&quot;: &quot;$:/tags/ViewToolbar&quot;,
+            &quot;modified&quot;: &quot;20190503174730158&quot;,
+            &quot;description&quot;: &quot;{{$:/plugins/.dtn/new-from-skeleton/button/hint}}&quot;,
+            &quot;created&quot;: &quot;20190118104453811&quot;,
+            &quot;caption&quot;: &quot;{{$:/plugins/.dtn/new-from-skeleton/button/image}} {{$:/plugins/.dtn/new-from-skeleton/button/caption}}&quot;
+        },
+        &quot;$:/plugins/.dtn/new-from-skeleton/button/caption&quot;: {
+            &quot;text&quot;: &quot;new from skeleton&quot;,
+            &quot;bag&quot;: &quot;default&quot;,
+            &quot;revision&quot;: &quot;0&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;title&quot;: &quot;$:/plugins/.dtn/new-from-skeleton/button/caption&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20190501213058350&quot;,
+            &quot;created&quot;: &quot;20190114114335883&quot;
+        },
+        &quot;$:/plugins/.dtn/new-from-skeleton/button/hint&quot;: {
+            &quot;text&quot;: &quot;Create a new tiddler from a skeleton tiddler&quot;,
+            &quot;bag&quot;: &quot;default&quot;,
+            &quot;revision&quot;: &quot;0&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;title&quot;: &quot;$:/plugins/.dtn/new-from-skeleton/button/hint&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20190501131846092&quot;,
+            &quot;created&quot;: &quot;20190114114218641&quot;
+        },
+        &quot;$:/plugins/.dtn/new-from-skeleton/button/image&quot;: {
+            &quot;text&quot;: &quot;&lt;svg class=\&quot;tgc-new-template-button tc-image-button\&quot; viewBox=\&quot;0 0 22 22\&quot; width=\&quot;22pt\&quot; height=\&quot;22pt\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; preserveAspectRatio=\&quot;xMidYMid meet\&quot;&gt;\n &lt;g&gt;\n  &lt;title&gt;Layer 1&lt;/title&gt;\n  &lt;rect height=\&quot;3.18427\&quot; width=\&quot;11.84691\&quot; id=\&quot;e1_rectangle\&quot; y=\&quot;17.06573\&quot; x=\&quot;10.02809\&quot;/&gt;\n  &lt;rect id=\&quot;e2_rectangle\&quot; height=\&quot;3.18427\&quot; width=\&quot;11.82083\&quot; y=\&quot;1.625\&quot; x=\&quot;10\&quot;/&gt;\n  &lt;rect transform=\&quot;matrix(0.03696432039320857,0,0,0.06008064622899197,61.76691469018027,72.69297278575596) \&quot; id=\&quot;e4_rectangle\&quot; height=\&quot;53\&quot; width=\&quot;264\&quot; y=\&quot;-1052.87631\&quot; x=\&quot;-1343.80504\&quot;/&gt;\n  &lt;rect id=\&quot;e5_rectangle\&quot; transform=\&quot;matrix(0.03696432039320857,0,0,0.06008064622899197,61.76691469018027,72.69297278575596) \&quot; height=\&quot;53\&quot; width=\&quot;264\&quot; y=\&quot;-1053.87631\&quot; x=\&quot;-1663.22788\&quot;/&gt;\n  &lt;rect id=\&quot;e6_rectangle\&quot; transform=\&quot;matrix(0.00003294807490963891,0.040680485400358,-0.0537343780992714,0.00005355276385491953,82.7917997491252,94.38851470356855) \&quot; height=\&quot;53\&quot; width=\&quot;264\&quot; y=\&quot;1414.59029\&quot; x=\&quot;-2185.64586\&quot;/&gt;\n &lt;/g&gt;\n&lt;/svg&gt;&quot;,
+            &quot;bag&quot;: &quot;default&quot;,
+            &quot;revision&quot;: &quot;0&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;title&quot;: &quot;$:/plugins/.dtn/new-from-skeleton/button/image&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Image&quot;,
+            &quot;modified&quot;: &quot;20190503174411363&quot;,
+            &quot;created&quot;: &quot;20190118104453828&quot;
+        },
+        &quot;$:/plugins/.dtn/new-from-skeleton/credits&quot;: {
+            &quot;text&quot;: &quot;The ~TiddlyWiki help page on [[Page and tiddler layout customisation|https://tiddlywiki.com/static/Page%2520and%2520tiddler%2520layout%2520customisation.html]] has a section called \&quot;Creating new buttons for the ~ViewToolbar and page controls\&quot; which provides greatly abbreviated instructions for adding a new button to the View Toolbar.\n\nTon Gerner's [[TW5 customisation site|http://tw5custom.tiddlyspot.com/]] provides more detailed instructions and uses the example of a button that creates a new tiddler from a template. The interface of this site is highly compressed and may initially be difficult to navigate. Most of the necessary information is provided at Customisation &gt; Advanced customisation &gt; Button &amp; Icons &gt; Buttons. Within that section look particularly at:\n\n* Buttons general\n* Button structure &gt; Standard buttons\n* Button examples &gt; Standard buttons.\n&quot;,
+            &quot;bag&quot;: &quot;default&quot;,
+            &quot;revision&quot;: &quot;0&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;title&quot;: &quot;$:/plugins/.dtn/new-from-skeleton/credits&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20190503172432835&quot;,
+            &quot;created&quot;: &quot;20190501212944273&quot;
+        },
+        &quot;$:/plugins/.dtn/new-from-skeleton/license&quot;: {
+            &quot;text&quot;: &quot;This plugin is distributed under the same license as Tiddlywiki, the [[3-Clause BSD License|https://opensource.org/licenses/BSD-3-Clause]] (also known as //BSD-3-Clause//, the //New BSD License//, and the //Modified BSD License//):\n\n---\n\nCopyright 2019 David Nebauer\n\nRedistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:\n\n1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.\n\n2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.\n\n3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.\n\nTHIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \\\&quot;AS IS\\\&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n&quot;,
+            &quot;bag&quot;: &quot;default&quot;,
+            &quot;revision&quot;: &quot;0&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;title&quot;: &quot;$:/plugins/.dtn/new-from-skeleton/license&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20190502120849019&quot;,
+            &quot;created&quot;: &quot;20190501213157673&quot;
+        },
+        &quot;$:/plugins/.dtn/new-from-skeleton/readme&quot;: {
+            &quot;text&quot;: &quot;This plugin adds the following button to the View Toolbar:\n\n{{$:/plugins/.dtn/new-from-skeleton/button/image}}\n\nWhen pressed, it creates a draft tiddler based on the skeleton tiddler [[$:/config/plugins/.dtn/new-from-skeleton/skeleton]].\n\nEdit the skeleton tiddler from time to time as desired.\n\n!!! Configure button location in View Toolbar (optional)\n\nTo configure where the button appears in the toolbar, edit the //list// field in the `$:/tags/ViewToolbar` tiddler. This is not an entirely intuitive process -- it involves:\n\n* Opening the advanced search dialog (click the magnifying glass icon next to the search field),\n* Selecting 'Shadows' tab,\n* Entering `$:/tags/ViewToolbar` in the advanced search field,\n* Clicking on the exactly matching result, i.e., `$:/tags/ViewToolbar` rather than `SystemTag: $:/tags/ViewToolbar`, to open the tiddler,\n* Clicking on the 'Edit this tiddler' icon to open the tiddler for editing,\n* Locating the //list// field, and\n* Adding [[$:/plugins/.dtn/new-from-skeleton/button]] to the appropriate place in the list.\n\n!!! Tiddler naming\n\nThe tiddlers in this plugin do not follow the standard naming conventions for core ui buttons. Instead, the tiddler naming conventions for plugins are followed, e.g., except for configuration plugins the tiddlers have the name stem `$:/plugins/.dtn/new-from-skeleton/`.\n&quot;,
+            &quot;bag&quot;: &quot;default&quot;,
+            &quot;revision&quot;: &quot;0&quot;,
+            &quot;type&quot;: &quot;text/vnd.tiddlywiki&quot;,
+            &quot;title&quot;: &quot;$:/plugins/.dtn/new-from-skeleton/readme&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20190503180914825&quot;,
+            &quot;created&quot;: &quot;20190118100926205&quot;
+        }
+    }
+}</pre>
+</div>
+<div bag="default" caption="{{$:/plugins/.dtn/new-from-skeleton/button/image}} {{$:/plugins/.dtn/new-from-skeleton/button/caption}}" created="20190118104453811" description="{{$:/plugins/.dtn/new-from-skeleton/button/hint}}" modified="20200719222856683" revision="0" tags="$:/tags/ViewToolbar" title="$:/plugins/.dtn/new-from-skeleton/button" type="text/vnd.tiddlywiki">
+<pre>\whitespace trim
+\define newTiddlerButton()
+  &lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt;
+           tooltip={{$:/plugins/.dtn/new-from-skeleton/button/hint}} &gt;
+
+    &lt;!-- Create new tiddler from tiddler titled &quot;$param&quot; --&gt;
+
+    &lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot;
+                         $param=&quot;$:/config/plugins/.dtn/new-from-skeleton/skeleton&quot;
+                         title=&quot;New Tiddler&quot; /&gt;
+
+    &lt;!-- Add as toolbar button --&gt;
+
+    &lt;$list filter=&quot;[&lt;tv-config-toolbar-icons&gt;prefix[yes]]&quot;&gt;
+      {{$:/plugins/.dtn/new-from-skeleton/button/image}}
+    &lt;/$list&gt;
+
+    &lt;$list filter=&quot;[&lt;tv-config-toolbar-text&gt;prefix[yes]]&quot;&gt;
+      &lt;span class=&quot;tc-btn-text&quot;&gt;
+        &lt;$text text={{$:/plugins/.dtn/new-from-skeleton/button/caption}}/&gt;
+      &lt;/span&gt;
+    &lt;/$list&gt;
+
+  &lt;/$button&gt;
+\end
+
+&lt;&lt;newTiddlerButton&gt;&gt;</pre>
 </div>
 <div created="20200613214719584" modified="20200613214749409" title="$:/SiteSubtitle">
 <pre>A world of mistakes and redemptions.</pre>
@@ -9819,11 +10005,17 @@ Error message and password prompt
 <div created="20200614214028735" modified="20200614214032116" title="$:/state/image-picker/system-1650702437">
 <pre>hide</pre>
 </div>
+<div created="20200719220354937" modified="20200719220357558" title="$:/state/plugin-info-1617027998-$:/plugins/.dtn/new-from-skeleton---1754274699">
+<pre>contents</pre>
+</div>
 <div created="20200613235409459" modified="20200705192942986" title="$:/state/showeditpreview">
 <pre>no</pre>
 </div>
 <div created="20200613215343399" modified="20200614214745810" title="$:/state/sidebar">
 <pre>yes</pre>
+</div>
+<div created="20200719220636620" modified="20200719222947426" title="$:/state/tab--1498284803">
+<pre>$:/core/ui/AdvancedSearch/Standard</pre>
 </div>
 <div created="20200613215252772" modified="20200613235052047" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Advanced</pre>
@@ -9837,11 +10029,11 @@ Error message and password prompt
 <div created="20200613235122648" modified="20200719005153084" title="$:/state/tab-2065006209">
 <pre>$:/core/ui/ControlPanel/Saving/DownloadSaver</pre>
 </div>
-<div created="20200613233210051" modified="20200705192909357" title="$:/state/tab/moresidebar-1850697562">
-<pre>$:/core/ui/MoreSideBar/Recent</pre>
+<div created="20200613233210051" modified="20200719221643084" title="$:/state/tab/moresidebar-1850697562">
+<pre>$:/core/ui/MoreSideBar/Shadows</pre>
 </div>
-<div created="20200613215036502" modified="20200719005506414" title="$:/state/tab/sidebar--595412856">
-<pre>TableOfContents</pre>
+<div created="20200613215036502" modified="20200719223040718" title="$:/state/tab/sidebar--595412856">
+<pre>$:/core/ui/SideBar/More</pre>
 </div>
 <div created="20200613215503201" modified="20200613215507174" title="$:/state/tag-manager/Character">
 <pre>closed</pre>
@@ -9933,8 +10125,14 @@ Error message and password prompt
 <div title="$:/status/RequireReloadDueToPluginChange">
 <pre>no</pre>
 </div>
-<div created="20200719004236086" list="[[~Template~ Character]] [[Red Ribbon Gang]] [[Ethlem Turner]] [[Table of Contents]] Alura [[Yu'ra Luft]] Terria" modified="20200719013727881" title="$:/StoryList">
+<div created="20200719220148625" list="[[Creation Menu]] Temp_Character [[Draft of '$:/plugins/.dtn/new-from-skeleton/button']] $:/plugins/.dtn/new-from-skeleton/readme [[Table of Contents]]" modified="20200719223120071" title="$:/StoryList">
 <pre></pre>
+</div>
+<div created="20200719220732660" list="$:/core/ui/Buttons/more-tiddler-actions $:/core/ui/Buttons/info $:/core/ui/Buttons/new-here $:/core/ui/Buttons/new-journal-here $:/core/ui/Buttons/clone $:/core/ui/Buttons/export-tiddler $:/core/ui/Buttons/edit $:/core/ui/Buttons/delete $:/core/ui/Buttons/permalink $:/core/ui/Buttons/permaview $:/core/ui/Buttons/open-window $:/core/ui/Buttons/close-others $:/core/ui/Buttons/close $:/core/ui/Buttons/fold-others $:/core/ui/Buttons/fold" modified="20200719220823982" title="$:/tags/ViewToolbar">
+<pre></pre>
+</div>
+<div created="20200719220631590" modified="20200719222932049" title="$:/temp/advancedsearch">
+<pre>tm-new-tiddler</pre>
 </div>
 <div plugin-type="info" title="$:/temp/info-plugin" type="application/json">
 <pre>{
@@ -9997,7 +10195,7 @@ Error message and password prompt
 <div created="20200613215230334" modified="20200613215230334" title="$:/temp/NewTagName">
 <pre></pre>
 </div>
-<div created="20200613234518478" modified="20200613234521629" title="$:/temp/search">
+<div created="20200613234518478" modified="20200719222932049" title="$:/temp/search">
 <pre></pre>
 </div>
 <div author="JeremyRuston" core-version="&gt;=5.0.0" dependents="$:/themes/tiddlywiki/vanilla" description="Emphasises individual tiddlers" name="Snow White" plugin-priority="0" plugin-type="theme" title="$:/themes/tiddlywiki/snowwhite" type="application/json" version="5.1.22">
@@ -10178,8 +10376,43 @@ Fleeing such harsh presecution, a group of devotees fled society at large and se
 
 [[Aquitica]]</pre>
 </div>
+<div created="20200719224253245" modified="20200719224409848" tags="TableOfContents" title="Creation Menu">
+<pre>&lt;$button message=&quot;tm-new-tiddler&quot; param=&quot;Temp_Character&quot;&gt;New Character&lt;/$button&gt;
+
+!! Tiddler To Dos
+* Add ui button for this menu</pre>
+</div>
 <div created="20200613230519489" modified="20200613234559442" tags="Locations" title="D_Nation">
 <pre></pre>
+</div>
+<div bag="default" caption="{{$:/plugins/.dtn/new-from-skeleton/button/image}} {{$:/plugins/.dtn/new-from-skeleton/button/caption}}" created="20190118104453811" description="{{$:/plugins/.dtn/new-from-skeleton/button/hint}}" draft.of="$:/plugins/.dtn/new-from-skeleton/button" draft.title="$:/plugins/.dtn/new-from-skeleton/button" modified="20200719222910374" revision="0" tags="$:/tags/ViewToolbar" title="Draft of '$:/plugins/.dtn/new-from-skeleton/button'" type="text/vnd.tiddlywiki">
+<pre>\whitespace trim
+\define newTiddlerButton()
+  &lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt;
+           tooltip={{$:/plugins/.dtn/new-from-skeleton/button/hint}} &gt;
+
+    &lt;!-- Create new tiddler from tiddler titled &quot;$param&quot; --&gt;
+
+    &lt;$action-sendmessage $message=&quot;tm-new-tiddler&quot;
+                         $param=&quot;$:/config/plugins/.dtn/new-from-skeleton/skeleton&quot;
+                         title=&quot;New Tiddler&quot; /&gt;
+
+    &lt;!-- Add as toolbar button --&gt;
+
+    &lt;$list filter=&quot;[&lt;tv-config-toolbar-icons&gt;prefix[yes]]&quot;&gt;
+      {{$:/plugins/.dtn/new-from-skeleton/button/image}}
+    &lt;/$list&gt;
+
+    &lt;$list filter=&quot;[&lt;tv-config-toolbar-text&gt;prefix[yes]]&quot;&gt;
+      &lt;span class=&quot;tc-btn-text&quot;&gt;
+        &lt;$text text={{$:/plugins/.dtn/new-from-skeleton/button/caption}}/&gt;
+      &lt;/span&gt;
+    &lt;/$list&gt;
+
+  &lt;/$button&gt;
+\end
+
+&lt;&lt;newTiddlerButton&gt;&gt;</pre>
 </div>
 <div created="20200613231205181" modified="20200613231232233" tags="City D_Nation" title="Dwarvin Capital">
 <pre></pre>
@@ -10314,7 +10547,7 @@ Pip and Alpha first heard of this gang from [[Ethelm Turner]] when first arrivin
 <div created="20200613231352867" home="Acota" modified="20200614000926386" tags="Character" title="Taber">
 <pre></pre>
 </div>
-<div created="20200719003404629" modified="20200719004917757" title="Table of Contents">
+<div created="20200719003404629" modified="20200719224315012" title="Table of Contents">
 <pre>&lt;div class=&quot;tc-table-of-contents&quot;&gt;
 
 &lt;&lt;toc-selective-expandable 'TableOfContents'&gt;&gt;
@@ -10327,6 +10560,9 @@ Pip and Alpha first heard of this gang from [[Ethelm Turner]] when first arrivin
 &lt;&lt;toc-selective-expandable 'TableOfContents'&gt;&gt;
 
 &lt;/div&gt;</pre>
+</div>
+<div age="" alignment="" created="20200719222639301" modified="20200719223032619" tags="Character Skel" title="Temp_Character">
+<pre></pre>
 </div>
 <div created="20200614214118440" modified="20200719005301055" tags="Term" title="Terria">
 <pre>Terria is the globally accepted term for the celestial body on which all known nations reside in this plan of existence. </pre>
@@ -10377,6 +10613,9 @@ Pip, I'm sorry that I cannot spend more time unraveling what great power to whic
  &lt;p&gt; 
 Alpha and Taber, you have one another now. You are brothers of misfortune. Tied together by an undoubtfully evil man bent on distorting the laws of nature for his own gain. Von Bruin must be stopped.  The progress I made must not be lost. There are others like you, no doubt. Find them and you will find a family for yourselves. As you know, Taber, I am left without leads as to other subjects or the whereabouts of Von Bruin, but I'm certain he will appear. I do sense, however, that another is near. Be particularly observant on your journeys. And allow this cabin to also be a safe haven for those lost souls. 
 //</pre>
+</div>
+<div title="Untitled">
+<pre>https://github.com/dnebauer/tw-new-from-skeleton/blob/master/plugin/%24__plugins_.dtn_new-from-skeleton.tid</pre>
 </div>
 <div created="20200719010228133" modified="20200719010235859" title="Yu'ra Luft">
 <pre>Wife to </pre>
