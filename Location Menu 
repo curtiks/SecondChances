@@ -1,0 +1,34 @@
+<style>
+  .grid {
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column
+  }
+</style>
+
+<div class="grid">
+  <div>
+    <details class="tc-detailsl">
+      <summary>Shops</summary>
+      <span>
+        <<list-links [tag[Shop]location[Acota]]>>
+      </span>
+    </details>
+  </div>
+  <div>
+    <details class="tc-detailsl">
+      <summary>Inn</summary>
+      <span>
+        <<list-links [tag[Inn]location[Acota]]>>
+      </span>
+    </details>
+  </div>
+  <div>
+    <details class="tc-detailsl">
+      <summary>Residence</summary>
+      <span>
+        <<list-links [tag[Residence]location[Acota]]>>
+      </span>
+    </details>
+  </div>
+</div>
