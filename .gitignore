@@ -2,5 +2,6 @@
 PlayerMenu
 Location Menu 
 *.icloud
+.DS_Store
 index.html_backup/
 SecondChanges_DM.html_backup/
